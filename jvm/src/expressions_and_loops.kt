@@ -1,3 +1,6 @@
+import java.io.File
+import java.util.*
+
 fun main(args: Array<String>) {
     // While loops have the same syntax in Kotlin compared to Java
     var i = 0
@@ -70,8 +73,8 @@ fun main(args: Array<String>) {
 
     // Try-catch block is also an expression, it will return the last value inside blocks
     val input = try {
-        Scanner("file.txt")
+        Scanner(File("input.txt")).next()
     } catch (e: java.io.IOException) {
-        Scanner(System.in)
+        "Error!"
     }
 }
