@@ -29,6 +29,10 @@ fun main(args: Array<String>) {
         println("$index : ${lessons[index]}")
     }
 
+    // You can also make use of ranges to achieve the same code
+    for (index in 0..lessons.size) {
+        println("$index : ${lessons[index]}")
+    }
     val number = 5
 
     // If statements are also same syntax-wise
@@ -61,5 +65,13 @@ fun main(args: Array<String>) {
         in 1..10 -> "Number is in range [1, 10)"
         else -> "Number is negative or is bigger than or equal to 10"
     }
+
     println(message)
+
+    // Try-catch block is also an expression, it will return the last value inside blocks
+    val input = try {
+        Scanner("file.txt")
+    } catch (e: java.io.IOException) {
+        Scanner(System.in)
+    }
 }
